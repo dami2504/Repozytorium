@@ -102,6 +102,7 @@ textarea {
     background:#fafafa;
 }
 
+/* gorna czesc */
 #toDo-upperPart
 {
     max-width:100rem;
@@ -148,6 +149,7 @@ textarea {
     box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
 }
 
+/* dolna czesc */
 #toDo-bottomPart
 {
     max-width:98rem;
@@ -175,6 +177,7 @@ textarea {
     padding:0.2rem;
     width: 100%; 
 }
+
 h2
 {
     text-transform: uppercase;

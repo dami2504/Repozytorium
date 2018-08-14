@@ -1,64 +1,33 @@
 
     let toDoForm = document.querySelector(".toDo-form-addTask");
     let toDoList = document.querySelector(".toDo-list");
-function addTask1(text) {
-    //element todo
-    const todo = document.createElement('div');
-    todo.classList.add('toDo-element');
 
-    //belka gorna
-    const todoBar = document.createElement('div');
-    todoBar.classList.add('toDo-element-bar');
-
-    //data w belce
-    const todoDate = document.createElement('div');
-    todoDate.classList.add('toDo-element-bar');
-    const date = new Date();
-    const dateText = date.getDate() + '-' + (date.getMonth()+1) + '-' + date.getFullYear() + ' godz.: ' + date.getHours() + ':' + date.getMinutes();
-    todoDate.innerText = dateText;
-
-    //przycisk usuwania
-    const todoDelete = document.createElement('button');
-    todoDelete.classList.add('toDo-element-deleteButton');
-    
-    todoDelete.innerHTML = 'x';
-
-    //wrzucamy elementy do belki
-    todoBar.appendChild(todoDate);
-    todoBar.appendChild(todoDelete);
-
-    //element z tekstem
-    const todoText = document.createElement('div');
-    todoText.classList.add('toDo-element-text');
-    todoText.innerText = text;
-
-    //laczymy calosc
-    todo.appendChild(todoBar);
-    todo.appendChild(todoText);
-
-    //i wrzucamy do listy
-    toDoList.append(todo);
-}
 function addTask(text)
 {
+    // glowny element
     const toDoElement = document.createElement("div");
     toDoElement.classList.add("toDo-element");
     
+    //pasek elementu
     const toDoBar = document.createElement("div");
     toDoBar.classList.add("toDo-element-bar");
     
+    //data 
     const h3 = document.createElement("h3");
     h3.classList.add("toDo-elementDate");
     const date = new Date();
     h3.innerText=date.getFullYear()+"/"+ date.getMonth()+"/"+(date.getDay()+1)+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
     
+    //przycisk do usuwania
     const button = document.createElement("button");
     button.classList.add("toDo-element-deleteButton");
     button.innerText = "X";
     
+    //dodawanie przycisku i daty do paska
     toDoBar.appendChild(h3);
     toDoBar.appendChild(button);
     
+    //element z tekstem zadania
     const toDoElementText=document.createElement("div");
     toDoElementText.classList.add("toDo-element-text");
     toDoElementText.innerText=text;
@@ -66,6 +35,7 @@ function addTask(text)
     toDoElement.appendChild(toDoBar);
     toDoElement.appendChild(toDoElementText);
     
+    //dodanie do listy zadania
     toDoList.append(toDoElement);
 }
 
@@ -75,7 +45,7 @@ window.onload = function()
     toDoList = document.querySelector(".toDo-list");
     
     
-    
+    //listener odpowiedzialny za dodawanie zadan
     toDoForm.addEventListener("submit",function(e)
         {
             e.preventDefault();
@@ -90,7 +60,7 @@ window.onload = function()
         }
     );
 
-      
+    //listener odpowiedzialny za usuwanie zadan
     toDoList.addEventListener("click",function(e)
      {
          
@@ -101,7 +71,7 @@ window.onload = function()
         
      });
     
-
+    // listener odpowiedzialny za wyszukiwanie zadan
     var toDoSearch = document.querySelector("#toDo-input-search");
     toDoSearch.addEventListener("input",function()
     {
