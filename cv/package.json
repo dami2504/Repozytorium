@@ -1,0 +1,38 @@
+{
+  "name": "gulp-starter",
+  "version": "1.0.0",
+  "description": "Simple gulp starter for front-end projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WojtekWernicki/gulp-starter.git"
+  },
+  "keywords": [
+    "gulp",
+    "starter"
+  ],
+  "author": "Damian Mularczyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WojtekWernicki/gulp-starter/issues"
+  },
+  "homepage": "https://github.com/WojtekWernicki/gulp-starter#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.4"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^3.3.1"
+  }
+}
